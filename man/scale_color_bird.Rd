@@ -16,6 +16,6 @@ ggplot-friendly color gradient
 Create ggplot color gradient
 }
 \examples{
-scale_color_bird(bird_cols)
+scale_color_bird(bird_colors())
 
 }

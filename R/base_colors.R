@@ -69,7 +69,7 @@ bird_colors <- function(palette_name="Scarlet Macaw", ncols = NA){
 #' @returns ggplot-friendly color gradient
 #' @export
 #'
-#' @examples scale_color_bird(bird_cols)
+#' @examples scale_color_bird(bird_colors())
 #'
 scale_color_bird <- function(bird_cols) {
   colpal <- grDevices::colorRampPalette(bird_cols, space = "Lab")
@@ -86,7 +86,7 @@ scale_color_bird <- function(bird_cols) {
 #' @returns ggplot-friendly fill gradient
 #' @export
 #'
-#' @examples scale_fill_bird(bird_cols)
+#' @examples scale_fill_bird(bird_colors())
 #'
 scale_fill_bird <- function(bird_cols) {
   colpal <- grDevices::colorRampPalette(bird_cols, space = "Lab")

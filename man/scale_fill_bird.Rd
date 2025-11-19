@@ -16,6 +16,6 @@ ggplot-friendly fill gradient
 Title
 }
 \examples{
-scale_fill_bird(bird_cols)
+scale_fill_bird(bird_colors())
 
 }
