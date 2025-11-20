@@ -4,10 +4,10 @@
 # More helpful info from: https://www.youtube.com/watch?v=gl9fFmtXFcI&t=382s
 
 bird_palettes <- list(
-  # 2 color
+  # 2 color - best for sequential/continuous palettes
   Scarlet_Tanager = c("#34323F","#AA2720"),
 
-  # 3 color
+  # 3 color - best for divergent color palettes
   Lazuli_Bunting = c("#BB6E31","#95A0A6","#0086BF"),
 
   # 4 color palettes
@@ -37,7 +37,7 @@ bird_palettes <- list(
 #'
 #' @examples bird_colors()
 #' @examples bird_colors("Scarlet Macaw")
-#' @examples bird_colors("Scarlet Macaw",7)
+#' @examples bird_colors("Scarlet_Macaw",7)
 #'
 bird_colors <- function(palette_name="Scarlet Macaw", ncols = NA){
 
@@ -71,15 +71,14 @@ bird_colors <- function(palette_name="Scarlet Macaw", ncols = NA){
 #'
 #' @examples scale_color_bird(bird_colors())
 #'
-scale_color_bird <- function(bird_cols) {
+scale_color_bird <- function(bird_cols){
   colpal <- grDevices::colorRampPalette(bird_cols, space = "Lab")
   ggplot2::scale_colour_gradientn(
     colours = colpal(300)
   )
 }
 
-# Create ggplot fill gradient
-#' Title
+#' Create ggplot fill gradient
 #'
 #' @param bird_cols Bird colors extracted via bird_colors function
 #'
@@ -88,9 +87,24 @@ scale_color_bird <- function(bird_cols) {
 #'
 #' @examples scale_fill_bird(bird_colors())
 #'
-scale_fill_bird <- function(bird_cols) {
+scale_fill_bird <- function(bird_cols){
   colpal <- grDevices::colorRampPalette(bird_cols, space = "Lab")
   ggplot2::scale_fill_gradientn(
     colours = colpal(300)
   )
 }
+
+#Print out available birds
+#' Print out available bird color palettes
+#'
+#' @returns Prints data.frame of available birds and color number
+#' @export
+#'
+#' @examples bird_menu()
+bird_menu <- function(){
+  palette_options <- data.frame(bird_names = names(bird_palettes),
+                                ncols=as.numeric(lapply(bird_palettes,length)))
+  print(palette_options)
+}
+
+bird_menu()

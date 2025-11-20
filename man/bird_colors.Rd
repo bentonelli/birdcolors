@@ -20,6 +20,6 @@ Extract a bird's color palette
 \examples{
 bird_colors()
 bird_colors("Scarlet Macaw")
-bird_colors("Scarlet Macaw",7)
+bird_colors("Scarlet_Macaw",7)
 
 }

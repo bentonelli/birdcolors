@@ -1,8 +1,8 @@
 Package: birdcolors
 Type: Package
 Title: Create palettes from the colors of the world's birds
-Date: 2025-11-19
-Version: 0.0.1
+Date: 2025-11-20
+Version: 0.0.2
 Authors@R: c(
     person(
       "Ben", "Tonelli",

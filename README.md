@@ -3,7 +3,7 @@
 ## Install
 
 ``` r
-#devtools::install_github("bentonelli/birdcolors")
+devtools::install_github("bentonelli/birdcolors")
 ```
 
 ## Basic Use
@@ -20,7 +20,7 @@ xx <- (1:7)
 yy <- (1:7)
 zz <- (1:7)
 
-plot(xx,yy,col=outp[zz],pch=19,cex=5)
+plot(xx,yy,col=outp[zz],pch=19,cex=2)
 ```
 
 ![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)

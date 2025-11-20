@@ -2,7 +2,7 @@
 % Please edit documentation in R/base_colors.R
 \name{scale_fill_bird}
 \alias{scale_fill_bird}
-\title{Title}
+\title{Create ggplot fill gradient}
 \usage{
 scale_fill_bird(bird_cols)
 }
@@ -13,7 +13,7 @@ scale_fill_bird(bird_cols)
 ggplot-friendly fill gradient
 }
 \description{
-Title
+Create ggplot fill gradient
 }
 \examples{
 scale_fill_bird(bird_colors())
