@@ -12,7 +12,7 @@ Authors@R: c(
   )
 Depends: R (>= 4.0)
 Description: Create attractive palettes based on the colors of the world's birds.
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
