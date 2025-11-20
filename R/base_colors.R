@@ -6,9 +6,20 @@
 bird_palettes <- list(
   # 2 color - best for sequential/continuous palettes
   Scarlet_Tanager = c("#34323F","#AA2720"),
+  Indigo_Bunting = c("#080806","#367CCF"),
+  Pine_Warbler = c("#90918D","#E6D246"),
+  Varied_Thrush = c("#7D7C81","#C5803F"),
+  Cassin_s_Finch = c("#DBD9DE","#C63144"),
+  Barn_Swallow = c("#4B8EBB","#D89339"),
 
   # 3 color - best for divergent color palettes
   Lazuli_Bunting = c("#BB6E31","#95A0A6","#0086BF"),
+  Allen_s_Hummingbird = c("#CC5A4F","#61555D","#809D89"),
+  Thick_billed_Euphonia = c("#375D88","#62605E","#F3D048"),
+  Yellow_headed_Amazon = c("#425013","#F3CA56","#A94843"),
+  Costa_s_Hummingbird = c("#737A54","#948873","#7E2786"),
+
+  # 4 color + palettes - best for discrete color palettes
 
   # 4 color palettes
   Belted_Kingfisher = c("#08070C","#6F82A1","#8E4517","#FBFBFD"),
@@ -20,9 +31,17 @@ bird_palettes <- list(
 
   # 6 color
   European_Goldfinch = c("#1B2025","#FCF369","#DDBF98","#980F1B","#B38759","#F4F4E9"),
+  Black_backed_Dwarf_Kingfisher = c("#3F3E62","#1020AF","#902BD2","#CA5988","#E39F39","#BE3F1F"),
 
   # 7 color
-  Scarlet_Macaw = c("#FF3D3F","#3870C5","#E0AD04","#262A31","#B8CBDE","#33794A","#273C93")
+  Scarlet_Macaw = c("#FF3D3F","#3870C5","#E0AD04","#262A31","#B8CBDE","#33794A","#273C93"),
+
+  # 8 color
+  Scaly_Ground_Roller = c("#558EDE","#D38B4A","#43827B","#733118","#3B5D3D","#BF9A5E","#313848","#80834C"),
+
+  # 9 color
+  Wood_Duck = c("#26794E","#453A2C","#FDB837","#EA654C","#6E6784","#63271C",
+                "#DDC29A","#CB4D3C","#030200")
 )
 
 #Helper function for examples of
@@ -31,6 +50,7 @@ bird_palettes <- list(
 #'
 #' @param palette_name Common name of a bird
 #' @param ncols Number of colors to extract
+#' @param reverse Should the palette order be flipped?
 #'
 #' @returns Extracted bird colors.
 #' @export
@@ -38,8 +58,9 @@ bird_palettes <- list(
 #' @examples bird_colors()
 #' @examples bird_colors("Scarlet Macaw")
 #' @examples bird_colors("Scarlet_Macaw",7)
+#' @examples bird_colors("Scarlet_Macaw",4,reverse=TRUE)
 #'
-bird_colors <- function(palette_name="Scarlet Macaw", ncols = NA){
+bird_colors <- function(palette_name="Scarlet Macaw", ncols = NA, reverse = FALSE){
 
   palette_name_gsub <- gsub("[- ']","_",palette_name)
 
@@ -59,7 +80,11 @@ bird_colors <- function(palette_name="Scarlet Macaw", ncols = NA){
     bird_cols <- bird_cols[1:ncols]
   }
 
-  bird_cols
+  if (reverse){
+    rev(bird_cols)
+  } else {
+    bird_cols
+  }
 }
 
 #' Create ggplot color gradient
@@ -106,5 +131,3 @@ bird_menu <- function(){
                                 ncols=as.numeric(lapply(bird_palettes,length)))
   print(palette_options)
 }
-
-bird_menu()

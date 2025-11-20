@@ -6,6 +6,10 @@ output:
 
 # Bird Color Palettes (made with 100% REAL birds!)
 
+birdcolors is a palette generator to spice up your scientific plots (and maybe your life) using the diversity of colors observed across the birds of the world.
+
+Cite us: Tonelli, B.A. (2025) birdcolors: A palette generator of bird colors. R package version 0.0.3.
+
 ## Install
 
 ```{r,eval=FALSE}
@@ -14,11 +18,16 @@ devtools::install_github("bentonelli/birdcolors")
 
 ## Basic Use
 
-### Base R
+### See what birds are being served today
 ```{r}
 library(birdcolors)
 library(ggplot2)
 
+bird_menu()
+```
+
+### Plotting with Base R
+```{r}
 # Base R
 outp <- bird_colors("Scarlet Macaw")
 xx <- (1:7)
@@ -28,9 +37,10 @@ zz <- (1:7)
 plot(xx,yy,col=outp[zz],pch=19,cex=2)
 ```
 
+### Plotting with ggplot
 ```{r}
 # ggplot2
-bird_cols <- bird_colors("Lazuli Bunting")
+bird_cols <- bird_colors("Lazuli Bunting",reverse=TRUE)
 
 xx <- (1:8)
 yy <- (1:8)

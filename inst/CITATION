@@ -1,0 +1,8 @@
+bibentry(
+  bibtype = "Manual",
+  title = "birdcolors: A palette generator of bird colors",
+  author = c(person("Benjamin","Tonelli")),
+  note = "R package version 0.0.3",
+  year = "2025",
+  url = "https://github.com/bentonelli/birdcolors"
+)

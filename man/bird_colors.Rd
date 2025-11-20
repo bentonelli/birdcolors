@@ -4,12 +4,14 @@
 \alias{bird_colors}
 \title{Extract a bird's color palette}
 \usage{
-bird_colors(palette_name = "Scarlet Macaw", ncols = NA)
+bird_colors(palette_name = "Scarlet Macaw", ncols = NA, reverse = FALSE)
 }
 \arguments{
 \item{palette_name}{Common name of a bird}
 
 \item{ncols}{Number of colors to extract}
+
+\item{reverse}{Should the palette order be flipped?}
 }
 \value{
 Extracted bird colors.
@@ -21,5 +23,6 @@ Extract a bird's color palette
 bird_colors()
 bird_colors("Scarlet Macaw")
 bird_colors("Scarlet_Macaw",7)
+bird_colors("Scarlet_Macaw",4,reverse=TRUE)
 
 }
