@@ -1,6 +1,6 @@
 # Bird Color Palettes (made with 100% REAL birds!)
 
-![devel 0.0.3](https://img.shields.io/badge/devel-0.0.3-red.svg)
+![devel 0.0.4](https://img.shields.io/badge/devel-0.0.4-red.svg)
 
 
 
