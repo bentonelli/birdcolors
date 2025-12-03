@@ -4,10 +4,12 @@
 \alias{scale_color_bird}
 \title{Create ggplot color gradient}
 \usage{
-scale_color_bird(bird_cols)
+scale_color_bird(bird_cols, midpoint = NA)
 }
 \arguments{
 \item{bird_cols}{Bird colors extracted via bird_colors function}
+
+\item{midpoint}{Midpoint of diverging color palette, only for 3-color palettes}
 }
 \value{
 ggplot-friendly color gradient

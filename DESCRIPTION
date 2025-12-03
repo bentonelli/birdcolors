@@ -1,13 +1,22 @@
 Package: birdcolors
 Type: Package
 Title: Create palettes from the colors of the world's birds
-Date: 2025-11-20
-Version: 0.0.3
+Date: 2025-12-03
+Version: 0.0.4
 Authors@R: c(
     person(
       "Ben", "Tonelli",
       email = "btonell@clemson.edu",
       role = c("aut", "cre")
+    ),
+    person(
+      "Casey", "Youngflesh",
+      email = "cyoungf@clemson.edu",
+      role = c("aut")
+    ),
+    person(
+      "Chris", "Sayers",
+      role = c("ctb")
     )
   )
 Depends: R (>= 4.0)

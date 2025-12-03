@@ -2,5 +2,6 @@
 
 export(bird_colors)
 export(bird_menu)
+export(leaderboard)
 export(scale_color_bird)
 export(scale_fill_bird)
