@@ -1,8 +1,17 @@
 # Bird Color Palettes (made with 100% REAL birds!)
 
-![devel 0.0.3](https://img.shields.io/badge/devel-0.0.3-red.svg)
+<figure>
+<img src="https://img.shields.io/badge/devel-0.0.4-red.svg"
+alt="devel 0.0.4" />
+<figcaption aria-hidden="true">devel 0.0.4</figcaption>
+</figure>
 
+birdcolors is a palette generator to spice up your scientific plots (and
+maybe your life) using the diversity of colors observed across the birds
+of the world.
 
+Cite us: Tonelli, B.A. (2025) birdcolors: A palette generator of bird
+colors. R package version 0.0.4
 
 ## Install
 
@@ -33,15 +42,23 @@ bird_menu()
     ## 9          Thick_billed_Euphonia     3
     ## 10          Yellow_headed_Amazon     3
     ## 11           Costa_s_Hummingbird     3
-    ## 12             Belted_Kingfisher     4
-    ## 13       Gray_crowned_Rosy_finch     4
-    ## 14              Elegant_Euphonia     4
-    ## 15              Paradise_Tanager     5
-    ## 16            European_Goldfinch     6
-    ## 17 Black_backed_Dwarf_Kingfisher     6
-    ## 18                 Scarlet_Macaw     7
-    ## 19           Scaly_Ground_Roller     8
-    ## 20                     Wood_Duck     9
+    ## 12       Andean_Cock_of_the_Rock     3
+    ## 13                    Bluethroat     3
+    ## 14                Lovely_Sunbird     3
+    ## 15              Curl_crested_Jay     3
+    ## 16             Northern_Shoveler     3
+    ## 17             Belted_Kingfisher     4
+    ## 18       Gray_crowned_Rosy_finch     4
+    ## 19              Elegant_Euphonia     4
+    ## 20        Black_spotted_Bare_eye     4
+    ## 21              Paradise_Tanager     5
+    ## 22         Hairy_crested_Antbird     5
+    ## 23            European_Goldfinch     6
+    ## 24 Black_backed_Dwarf_Kingfisher     6
+    ## 25                    Blue_Pitta     6
+    ## 26                 Scarlet_Macaw     7
+    ## 27           Scaly_Ground_Roller     8
+    ## 28                     Wood_Duck     9
 
 ### Plotting with Base R
 
@@ -55,13 +72,13 @@ zz <- (1:7)
 plot(xx,yy,col=outp[zz],pch=19,cex=2)
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](create_github_readme_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
 ### Plotting with ggplot
 
 ``` r
 # ggplot2
-bird_cols <- bird_colors("Lazuli Bunting",reverse=TRUE)
+bird_cols <- bird_colors("Lovely Sunbird",reverse=TRUE)
 
 xx <- (1:8)
 yy <- (1:8)
@@ -69,8 +86,8 @@ zz <- (1:8)
 
 ggplot() +
   geom_point(aes(x = xx,y=yy,col=zz),pch=19,cex=5) +
-  scale_color_bird(bird_cols) +
+  scale_color_bird(bird_cols,midpoint=4) +
   theme_classic()
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](create_github_readme_files/figure-markdown_github/unnamed-chunk-4-1.png)
