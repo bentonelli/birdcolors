@@ -43,12 +43,10 @@ bird_menu("rec")
 ### Visualize these recommended palettes
 
 ``` r
-print(bird_palette_visualizer(all_or_rec = "rec",pdf_plot = FALSE))
+bird_palette_visualizer(all_or_rec = "rec",pdf_plot = FALSE)
 ```
 
 ![](create_github_readme_files/figure-markdown_github/unnamed-chunk-3-1.png)
-
-    ## NULL
 
 ### Plotting discrete colors with base R
 
