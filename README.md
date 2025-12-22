@@ -1,11 +1,5 @@
 # Bird Color Palettes (made with 100% REAL birds!)
 
-<figure>
-<img src="https://img.shields.io/badge/devel-0.0.5-red.svg"
-alt="devel 0.0.5" />
-<figcaption aria-hidden="true">devel 0.0.5</figcaption>
-</figure>
-
 birdcolors is a palette generator to spice up your scientific plots (and
 maybe your life) using the diversity of colors observed across the birds
 of the world.
@@ -21,50 +15,48 @@ devtools::install_github("bentonelli/birdcolors")
 
 ## Basic Use
 
-### See what birds are being served today
+### See what birds are being recommended today
 
 ``` r
 library(birdcolors)
 library(ggplot2)
 
-bird_menu()
+#Get recommended birds - visually appealing and colorblind friendly!
+bird_menu("rec")
 ```
 
-    ##                       bird_names ncols
-    ## 1                Scarlet_Tanager     2
-    ## 2                 Indigo_Bunting     2
-    ## 3                   Pine_Warbler     2
-    ## 4                  Varied_Thrush     2
-    ## 5                 Cassin_s_Finch     2
-    ## 6                   Barn_Swallow     2
-    ## 7                 Lazuli_Bunting     3
-    ## 8            Allen_s_Hummingbird     3
-    ## 9          Thick_billed_Euphonia     3
-    ## 10          Yellow_headed_Amazon     3
-    ## 11           Costa_s_Hummingbird     3
-    ## 12       Andean_Cock_of_the_Rock     3
-    ## 13                    Bluethroat     3
-    ## 14                Lovely_Sunbird     3
-    ## 15              Curl_crested_Jay     3
-    ## 16             Northern_Shoveler     3
-    ## 17             Belted_Kingfisher     4
-    ## 18       Gray_crowned_Rosy_finch     4
-    ## 19              Elegant_Euphonia     4
-    ## 20        Black_spotted_Bare_eye     4
-    ## 21              Paradise_Tanager     5
-    ## 22         Hairy_crested_Antbird     5
-    ## 23            European_Goldfinch     6
-    ## 24 Black_backed_Dwarf_Kingfisher     6
-    ## 25                    Blue_Pitta     6
-    ## 26                 Scarlet_Macaw     7
-    ## 27           Scaly_Ground_Roller     8
-    ## 28                     Wood_Duck     9
+    ##                bird_names ncols recommended
+    ## 5          Cassin_s_Finch     2  Continuous
+    ## 42   Ultramarine_Lorikeet     5  Continuous
+    ## 43 Hildebrandt_s_Starling     5  Continuous
+    ## 37  Lilac_breasted_Roller     5    Discrete
+    ## 47     European_Goldfinch     6    Discrete
+    ## 51          Scarlet_Macaw     7    Discrete
+    ## 15    Costa_s_Hummingbird     3   Divergent
+    ## 17         Lovely_Sunbird     3   Divergent
+    ## 44             Bluethroat     5   Divergent
 
-### Plotting with Base R
+``` r
+#For all available birds, use: bird_menu("all")
+```
+
+### Visualize these recommended palettes
+
+``` r
+bird_palette_visualizer(all_or_rec = "rec",pdf_plot = FALSE)
+```
+
+![](create_github_readme_files/figure-markdown_github/unnamed-chunk-3-1.png)
+
+### Plotting discrete colors with base R
 
 ``` r
 # Base R
+
+#Use the bird colors function to load in your favorite bird's colors.
 outp <- bird_colors("Scarlet Macaw")
+
+
 xx <- (1:7)
 yy <- (1:7)
 zz <- (1:7)
@@ -72,7 +64,7 @@ zz <- (1:7)
 plot(xx,yy,col=outp[zz],pch=19,cex=2)
 ```
 
-![](create_github_readme_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](create_github_readme_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
 ### Plotting with ggplot
 
@@ -80,14 +72,14 @@ plot(xx,yy,col=outp[zz],pch=19,cex=2)
 # ggplot2
 bird_cols <- bird_colors("Lovely Sunbird",reverse=TRUE)
 
-xx <- (1:8)
-yy <- (1:8)
-zz <- (1:8)
+xx <- rnorm(1000,0,1)
+yy <- rnorm(1000,0,1)
+zz <- xx
 
 ggplot() +
-  geom_point(aes(x = xx,y=yy,col=zz),pch=19,cex=5) +
-  scale_color_bird(bird_cols,midpoint=4) +
+  geom_point(aes(x = xx,y=yy,col=zz),pch=19,cex=2) +
+  scale_color_bird(bird_cols,midpoint=0) +
   theme_classic()
 ```
 
-![](create_github_readme_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](create_github_readme_files/figure-markdown_github/unnamed-chunk-5-1.png)
