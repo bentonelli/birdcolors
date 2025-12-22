@@ -1,9 +1,9 @@
 # Bird Color Palettes (made with 100% REAL birds!)
 
 <figure>
-<img src="https://img.shields.io/badge/devel-0.0.4-red.svg"
-alt="devel 0.0.4" />
-<figcaption aria-hidden="true">devel 0.0.4</figcaption>
+<img src="https://img.shields.io/badge/devel-0.0.5-red.svg"
+alt="devel 0.0.5" />
+<figcaption aria-hidden="true">devel 0.0.5</figcaption>
 </figure>
 
 birdcolors is a palette generator to spice up your scientific plots (and
@@ -11,7 +11,7 @@ maybe your life) using the diversity of colors observed across the birds
 of the world.
 
 Cite us: Tonelli, B.A. (2025) birdcolors: A palette generator of bird
-colors. R package version 0.0.4
+colors. R package version 0.0.5
 
 ## Install
 

@@ -4,7 +4,10 @@
 \alias{bird_menu}
 \title{Print out available bird color palettes}
 \usage{
-bird_menu()
+bird_menu(all_or_rec = "all")
+}
+\arguments{
+\item{all_or_rec}{Option "all" returns all available palettes, "rec" returns recommended}
 }
 \value{
 Prints data.frame of available birds and color number
