@@ -277,6 +277,9 @@ bird_palette_visualizer <- function(all_or_rec="all",pdf_plot = FALSE){
 
     
     if (all_or_rec=="rec"){
+      
+      main_size <- 1.5
+      
       if (names(bird_pal_to_plot)[nn] %in% rec_bird_palettes$continuous){
         bc <- bird_colors(names(bird_pal_to_plot)[nn],expand_palette = 15)
       } else if (names(bird_pal_to_plot)[nn] %in% rec_bird_palettes$divergent){
@@ -285,11 +288,14 @@ bird_palette_visualizer <- function(all_or_rec="all",pdf_plot = FALSE){
         bc <- bird_colors(names(bird_pal_to_plot)[nn])
       }
     } else {
+      
+      main_size <- 0.75
+      
       bc <- bird_colors(names(bird_pal_to_plot)[nn])
     }
     #Modified from stackexchange: https://stackoverflow.com/questions/25726276/visualize-a-list-of-colors-palette-in-r
     graphics::image(1:length(bc), 1, as.matrix(1:length(bc)),
-          col=bc,main=names(bird_pal_to_plot)[nn],cex.main=.75,
+          col=bc,main=names(bird_pal_to_plot)[nn],cex.main=main_size,
           xlab="", ylab = "", xaxt = "n", yaxt = "n", bty = "n")
   }
   
