@@ -1,6 +1,6 @@
 NEWS
 ====
 
-# 0.0.6:
+# 1.0.0:
 
-- Initial release
+- Initial public release

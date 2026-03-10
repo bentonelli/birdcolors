@@ -5,7 +5,7 @@ maybe your life) using the diversity of colors observed across the birds
 of the world.
 
 Cite us: Tonelli, B.A., Youngflesh, C. (2026) birdcolors: A palette generator of bird
-colors. R package version 0.0.6
+colors. R package version 1.0.0
 
 ## Install
 

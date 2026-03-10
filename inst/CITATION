@@ -2,7 +2,7 @@ bibentry(
   bibtype = "Manual",
   title = "birdcolors: Create Palettes from the Colors of the World's Birds",
   author = c(person("Benjamin","Tonelli"),person("Casey","Youngflesh")),
-  note = "R package version 0.0.6",
+  note = "R package version 1.0.0",
   year = "2026",
   url = "https://github.com/bentonelli/birdcolors"
 )
