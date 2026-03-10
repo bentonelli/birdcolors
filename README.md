@@ -4,8 +4,8 @@ birdcolors is a palette generator to spice up your scientific plots (and
 maybe your life) using the diversity of colors observed across the birds
 of the world.
 
-Cite us: Tonelli, B.A. (2025) birdcolors: A palette generator of bird
-colors. R package version 0.0.5
+Cite us: Tonelli, B.A., Youngflesh, C. (2026) birdcolors: A palette generator of bird
+colors. R package version 0.0.6
 
 ## Install
 

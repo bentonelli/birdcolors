@@ -3,11 +3,11 @@ CRAN comments
 
 ## Test environments
 
-XXXX
+Local macOS = R 4.4.2
 
 ## R CMD check results
 
-XXXX
+No ERRORS, WARNINGS or NOTES 
 
 ## Downstream dependencies
 

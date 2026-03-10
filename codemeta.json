@@ -5,19 +5,37 @@
   "description": "Create attractive palettes based on the colors of the world's birds.",
   "name": "birdcolors: Create palettes from the colors of the world's birds",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.5.1 (2025-06-13)",
+  "runtimePlatform": "R version 4.4.2 (2024-10-31)",
   "author": [
     {
       "@type": "Person",
       "givenName": "Ben",
       "familyName": "Tonelli",
       "email": "btonell@clemson.edu"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Casey",
+      "familyName": "Youngflesh",
+      "email": "cyoungf@clemson.edu"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "givenName": "Chris",
+      "familyName": "Sayers"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Ellie",
+      "familyName": "Magaldi"
     }
   ],
   "maintainer": [
@@ -49,7 +67,7 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "8.57KB",
+  "fileSize": "20.035KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -59,11 +77,16 @@
           "@type": "Person",
           "givenName": "Benjamin",
           "familyName": "Tonelli"
+        },
+        {
+          "@type": "Person",
+          "givenName": "Casey",
+          "familyName": "Youngflesh"
         }
       ],
       "name": "birdcolors: A palette generator of bird colors",
       "url": "https://github.com/bentonelli/birdcolors",
-      "description": "R package version 0.0.3"
+      "description": "R package version 0.0.5"
     }
   ],
   "codeRepository": "https://github.com/bentonelli/birdcolors",

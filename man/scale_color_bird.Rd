@@ -4,12 +4,27 @@
 \alias{scale_color_bird}
 \title{Create ggplot color gradient}
 \usage{
-scale_color_bird(bird_cols, midpoint = NA)
+scale_color_bird(
+  bird_cols,
+  midpoint = NA,
+  name = ggplot2::waiver(),
+  lim = NULL,
+  na.value = "grey50",
+  guide = "colourbar"
+)
 }
 \arguments{
 \item{bird_cols}{Bird colors extracted via bird_colors function}
 
 \item{midpoint}{Midpoint of diverging color palette, only for 3-color palettes}
+
+\item{name}{Legend label}
+
+\item{lim}{Limits for color ramp}
+
+\item{na.value}{Color when value is outside range}
+
+\item{guide}{Legend type, see ggplot2::scale_fill_gradient for details}
 }
 \value{
 ggplot-friendly color gradient

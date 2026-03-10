@@ -140,13 +140,18 @@ bird_colors <- function(palette_name="Scarlet Macaw", ncols = NA,
 #'
 #' @param bird_cols Bird colors extracted via bird_colors function
 #' @param midpoint Midpoint of diverging color palette, only for 3-color palettes
-#'
+#' @param name Legend label
+#' @param lim Limits for color ramp
+#' @param na.value Color when value is outside range
+#' @param guide Legend type, see ggplot2::scale_fill_gradient for details
+#' 
 #' @returns ggplot-friendly color gradient
 #' @export
 #'
 #' @examples scale_color_bird(bird_colors())
 #'
-scale_color_bird <- function(bird_cols,midpoint=NA){
+scale_color_bird <- function(bird_cols,midpoint=NA,name=ggplot2::waiver(),lim=NULL,
+                             na.value="grey50",guide="colourbar"){
   
   colpal <- grDevices::colorRampPalette(bird_cols, space = "Lab")
   
@@ -154,7 +159,11 @@ scale_color_bird <- function(bird_cols,midpoint=NA){
     
     ggplot2::scale_color_gradient2(
       low = bird_cols[1],mid=bird_cols[2],high=bird_cols[3],
-      midpoint=midpoint)
+      midpoint=midpoint,
+      name=name,
+      lim=lim,
+      na.value=na.value,
+      guide=guide)
     
   } else {
     
@@ -163,7 +172,11 @@ scale_color_bird <- function(bird_cols,midpoint=NA){
     }
     
     ggplot2::scale_colour_gradientn(
-      colours = colpal(300))
+      colours = colpal(300),
+      name=name,
+      lim=lim,
+      na.value=na.value,
+      guide=guide)
   }
 }
 
@@ -171,13 +184,18 @@ scale_color_bird <- function(bird_cols,midpoint=NA){
 #'
 #' @param bird_cols Bird colors extracted via bird_colors function
 #' @param midpoint Midpoint of diverging color palette, only for 3-color palettes
+#' @param name Legend label
+#' @param lim Limits for color ramp
+#' @param na.value Color when value is outside range
+#' @param guide Legend type, see ggplot2::scale_fill_gradient for details
 #'
 #' @returns ggplot-friendly fill gradient
 #' @export
 #'
 #' @examples scale_fill_bird(bird_colors())
 #'
-scale_fill_bird <- function(bird_cols,midpoint=NA){
+scale_fill_bird <- function(bird_cols,midpoint=NA,name=ggplot2::waiver(),lim=NULL,
+                            na.value="grey50",guide="colourbar"){
   
   colpal <- grDevices::colorRampPalette(bird_cols, space = "Lab")
   
@@ -185,7 +203,11 @@ scale_fill_bird <- function(bird_cols,midpoint=NA){
     
     ggplot2::scale_fill_gradient2(
       low = bird_cols[1],mid=bird_cols[2],high=bird_cols[3],
-      midpoint=midpoint)
+      midpoint=midpoint,
+      name=name,
+      lim=lim,
+      na.value=na.value,
+      guide=guide)
     
   } else {
     
@@ -193,7 +215,11 @@ scale_fill_bird <- function(bird_cols,midpoint=NA){
       warning("Midpoint not supported when number of colors != 3")
     }
     ggplot2::scale_fill_gradientn(
-      colours = colpal(300))
+      colours = colpal(300),
+      name=name,
+      lim=lim,
+      na.value=na.value,
+      guide=guide)
   }
 }
 
