@@ -2,10 +2,10 @@
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "birdcolors",
-  "description": "Create attractive palettes based on the colors of the world's birds.",
+  "description": "Create attractive palettes based on the colors of the world's birds. Palettes are composed of 2 to 9 colors, with options to expand palettes via interpolation. Compatible with the package 'ggplot2' and base R graphics.",
   "name": "birdcolors: Create Palettes from the Colors of the World's Birds",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -67,7 +67,7 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "20.076KB",
+  "fileSize": "20.545KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -86,7 +86,7 @@
       ],
       "name": "birdcolors: Create Palettes from the Colors of the World's Birds",
       "url": "https://github.com/bentonelli/birdcolors",
-      "description": "R package version 1.0.0"
+      "description": "R package version 1.0.1"
     }
   ],
   "codeRepository": "https://github.com/bentonelli/birdcolors",
