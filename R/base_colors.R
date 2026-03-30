@@ -133,7 +133,7 @@ bird_colors <- function(palette_name="Scarlet Macaw", ncols = NA,
     bird_cols <- colpal(expand_palette)
   }
   
-  bird_cols
+  return(bird_cols)
 }
 
 #' Create ggplot color gradient
@@ -223,12 +223,13 @@ scale_fill_bird <- function(bird_cols,midpoint=NA,name=ggplot2::waiver(),lim=NUL
   }
 }
 
-#Print out available birds
-#' Print out available bird color palettes
+#Return available birds
+#' Return available bird color palettes
 #'
 #' @param all_or_rec Option "all" returns all available palettes, "rec" returns recommended
-#' @returns Prints data.frame of available birds and color number
+#' @returns Returns data.frame of available birds and color number
 #' @export
+#' 
 #'
 #' @examples bird_menu()
 bird_menu <- function(all_or_rec = "all"){
@@ -243,11 +244,11 @@ bird_menu <- function(all_or_rec = "all"){
   palette_options$recommended[names(bird_palettes) %in% rec_bird_palettes$divergent] <- "Divergent"
   
   if (all_or_rec == "all"){
-    print(palette_options)
+    return(palette_options)
   } else if (all_or_rec == "rec"){
     palette_options <- palette_options[palette_options$recommended != "",]
     palette_options <- palette_options[order(palette_options$recommended),]
-    print(palette_options)
+    return(palette_options)
   } else {
     stop("Option not supported: options are, all OR rec")
   }
@@ -257,34 +258,41 @@ bird_menu <- function(all_or_rec = "all"){
 #' Search for available bird color palettes
 #'
 #' @param sp_name Provide full or partial name of bird you are looking for
-#' @returns Prints data.frame of available birds and color number
+#' @returns Returns character string of available birds
 #' @export
 #'
 #' @examples bird_search("Hummingbird")
 bird_search <- function(sp_name = "Penguin"){
-  available_palettes <- names(bird_palettes)[grepl(sp_name,names(bird_palettes))]
+  available_palettes <- names(bird_palettes)[grepl(sp_name,names(bird_palettes),ignore.case = TRUE)]
   if(length(available_palettes) == 0){
-    print("No matches found")
+    return("No matches found")
   } else {
-    print("Available birds:")
-    print(paste(available_palettes,collapse = ", "))
+    return(paste("Available birds:",paste(available_palettes,collapse = ", ")))
   }
 }
 
 #Bird palette visualizer
-#' Print out pictures of available bird color palettes
+#' Return pictures of available bird color palettes
 #'
 #' @returns Creates pdf of all available birds or rec birds
 #' @param all_or_rec Option "all" returns all available palettes, "rec" returns recommended
-#' @param pdf_plot Create a pdf of available palettes in the current working directory. Default is to send directly to plots
+#' @param pdf_plot Create a pdf of available palettes. Default is to send directly to plots
+#' @param path Directory in which to save pdf if pdf_plot=TRUE. Must be specified by the user.
 #' @export
 #'
 #' @examples bird_palette_visualizer("all")
-bird_palette_visualizer <- function(all_or_rec="all",pdf_plot = FALSE){
-  
+bird_palette_visualizer <- function(all_or_rec="all",pdf_plot = FALSE, path){
+
   if(pdf_plot){
-    grDevices::pdf(paste("bird_viz_",all_or_rec,".pdf",sep=""))
+    if(missing(path)){
+      stop("A 'path' must be provided when pdf_plot = TRUE")
+    }
+    grDevices::pdf(file.path(path, paste("bird_viz_",all_or_rec,".pdf",sep="")))
+    on.exit(grDevices::dev.off())
   }
+  
+  oldpar <- graphics::par(no.readonly = TRUE)
+  on.exit(graphics::par(oldpar), add = TRUE)
   graphics::par(mar=c(2,2,2,2))
   
   if(all_or_rec == "all"){
@@ -324,21 +332,17 @@ bird_palette_visualizer <- function(all_or_rec="all",pdf_plot = FALSE){
           col=bc,main=names(bird_pal_to_plot)[nn],cex.main=main_size,
           xlab="", ylab = "", xaxt = "n", yaxt = "n", bty = "n")
   }
-  
-  if(pdf_plot){
-    grDevices::dev.off()
-  }
 }
 
-#Print out leaderboard
-#' Print out leaders in contributing bird color palettes
+#Return leaderboard
+#' Return leaders in contributing bird color palettes
 #'
-#' @returns Prints data.frame of leaderboard in contributing bird color palettes
+#' @returns Returns data.frame of leaderboard in contributing bird color palettes
 #' @export
 #'
 #' @examples leaderboard()
 leaderboard <- function(){
   leaderboard_bc <- data.frame(people = c("Ben Tonelli","Ellie Magaldi","Casey Youngflesh","Chris Sayers"),
                                 contributions = c(28,7,7,5))
-  print(leaderboard_bc)
+  return(leaderboard_bc)
 }

@@ -2,15 +2,15 @@
 % Please edit documentation in R/base_colors.R
 \name{leaderboard}
 \alias{leaderboard}
-\title{Print out leaders in contributing bird color palettes}
+\title{Return leaders in contributing bird color palettes}
 \usage{
 leaderboard()
 }
 \value{
-Prints data.frame of leaderboard in contributing bird color palettes
+Returns data.frame of leaderboard in contributing bird color palettes
 }
 \description{
-Print out leaders in contributing bird color palettes
+Return leaders in contributing bird color palettes
 }
 \examples{
 leaderboard()

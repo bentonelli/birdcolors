@@ -2,20 +2,22 @@
 % Please edit documentation in R/base_colors.R
 \name{bird_palette_visualizer}
 \alias{bird_palette_visualizer}
-\title{Print out pictures of available bird color palettes}
+\title{Return pictures of available bird color palettes}
 \usage{
-bird_palette_visualizer(all_or_rec = "all", pdf_plot = FALSE)
+bird_palette_visualizer(all_or_rec = "all", pdf_plot = FALSE, path)
 }
 \arguments{
 \item{all_or_rec}{Option "all" returns all available palettes, "rec" returns recommended}
 
-\item{pdf_plot}{Create a pdf of available palettes in the current working directory. Default is to send directly to plots}
+\item{pdf_plot}{Create a pdf of available palettes. Default is to send directly to plots}
+
+\item{path}{Directory in which to save pdf if pdf_plot=TRUE. Must be specified by the user.}
 }
 \value{
 Creates pdf of all available birds or rec birds
 }
 \description{
-Print out pictures of available bird color palettes
+Return pictures of available bird color palettes
 }
 \examples{
 bird_palette_visualizer("all")

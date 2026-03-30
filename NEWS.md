@@ -1,6 +1,6 @@
 NEWS
 ====
 
-# 1.0.0:
+# 1.0.1:
 
-- Initial public release
+- Initial CRAN release

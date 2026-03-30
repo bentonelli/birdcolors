@@ -10,7 +10,7 @@ bird_search(sp_name = "Penguin")
 \item{sp_name}{Provide full or partial name of bird you are looking for}
 }
 \value{
-Prints data.frame of available birds and color number
+Returns character string of available birds
 }
 \description{
 Search for available bird color palettes

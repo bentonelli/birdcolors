@@ -2,7 +2,7 @@ Package: birdcolors
 Type: Package
 Title: Create Palettes from the Colors of the World's Birds
 Date: 2026-03-10
-Version: 1.0.0
+Version: 1.0.1
 Authors@R: c(
     person(
       "Ben", "Tonelli",
@@ -24,7 +24,7 @@ Authors@R: c(
     )
   )
 Depends: R (>= 4.0)
-Description: Create attractive palettes based on the colors of the world's birds.
+Description: Create attractive palettes based on the colors of the world's birds. Palettes are composed of 2 to 9 colors, with options to expand palettes via interpolation. Compatible with the package 'ggplot2' and base R graphics.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

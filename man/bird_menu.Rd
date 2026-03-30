@@ -2,7 +2,7 @@
 % Please edit documentation in R/base_colors.R
 \name{bird_menu}
 \alias{bird_menu}
-\title{Print out available bird color palettes}
+\title{Return available bird color palettes}
 \usage{
 bird_menu(all_or_rec = "all")
 }
@@ -10,10 +10,10 @@ bird_menu(all_or_rec = "all")
 \item{all_or_rec}{Option "all" returns all available palettes, "rec" returns recommended}
 }
 \value{
-Prints data.frame of available birds and color number
+Returns data.frame of available birds and color number
 }
 \description{
-Print out available bird color palettes
+Return available bird color palettes
 }
 \examples{
 bird_menu()
