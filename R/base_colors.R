@@ -4,7 +4,7 @@
 # Much more helpful info from: https://www.youtube.com/watch?v=gl9fFmtXFcI&t=382s
 
 bird_palettes <- list(
-  # 2 color - best for sequential/continuous palettes
+  # 2 color - best for sequential palettes
   Scarlet_Tanager = c("#34323F","#AA2720"),
   Indigo_Bunting = c("#080806","#367CCF"),
   Pine_Warbler = c("#90918D","#E6D246"),
@@ -16,7 +16,7 @@ bird_palettes <- list(
   Adelie_Penguin = c("#0F0F1A","#E9EAEF"),
   Emperor_Penguin = c("#000000","#FFFFFF"),
 
-  # 3 color - used for divergent or discrete color palettes
+  # 3 color - used for diverging or discrete color palettes
   Lazuli_Bunting = c("#BB6E31","#95A0A6","#0086BF"),
   Allen_s_Hummingbird = c("#CC5A4F","#61555D","#809D89"),
   Thick_billed_Euphonia = c("#375D88","#62605E","#F3D048"),
@@ -79,9 +79,9 @@ bird_palettes <- list(
 )
 
 rec_bird_palettes <- list(
-  continuous = c("Ultramarine_Lorikeet","Hildebrandt_s_Starling","Cassin_s_Finch"),
+  sequential = c("Ultramarine_Lorikeet","Hildebrandt_s_Starling","Cassin_s_Finch"),
   discrete = c("Lilac_breasted_Roller","Scarlet_Macaw","European_Goldfinch"),
-  divergent = c("Bluethroat","Lovely_Sunbird","Costa_s_Hummingbird")
+  diverging = c("Bluethroat","Lovely_Sunbird","Costa_s_Hummingbird")
 )
 
 
@@ -239,9 +239,9 @@ bird_menu <- function(all_or_rec = "all"){
   
   palette_options$recommended <- ""
   
-  palette_options$recommended[names(bird_palettes) %in% rec_bird_palettes$continuous] <- "Continuous"
+  palette_options$recommended[names(bird_palettes) %in% rec_bird_palettes$sequential] <- "Sequential"
   palette_options$recommended[names(bird_palettes) %in% rec_bird_palettes$discrete] <- "Discrete"
-  palette_options$recommended[names(bird_palettes) %in% rec_bird_palettes$divergent] <- "Divergent"
+  palette_options$recommended[names(bird_palettes) %in% rec_bird_palettes$diverging] <- "Diverging"
   
   if (all_or_rec == "all"){
     return(palette_options)
@@ -314,9 +314,9 @@ bird_palette_visualizer <- function(all_or_rec="all",pdf_plot = FALSE, path){
       
       main_size <- 1.5
       
-      if (names(bird_pal_to_plot)[nn] %in% rec_bird_palettes$continuous){
+      if (names(bird_pal_to_plot)[nn] %in% rec_bird_palettes$sequential){
         bc <- bird_colors(names(bird_pal_to_plot)[nn],expand_palette = 15)
-      } else if (names(bird_pal_to_plot)[nn] %in% rec_bird_palettes$divergent){
+      } else if (names(bird_pal_to_plot)[nn] %in% rec_bird_palettes$diverging){
         bc <- bird_colors(names(bird_pal_to_plot)[nn],expand_palette = 15)
       } else {
         bc <- bird_colors(names(bird_pal_to_plot)[nn])
