@@ -47,7 +47,8 @@ bird_menu("rec")
 bird_palette_visualizer(all_or_rec = "rec",pdf_plot = FALSE)
 ```
 
-![](create_github_readme_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](README_files/create_github_readme_files/figure-markdown_github/unnamed-chunk-3-1.png)
+
 
 ### Plotting discrete colors with base R
 
@@ -65,7 +66,7 @@ zz <- (1:7)
 plot(xx,yy,col=outp[zz],pch=19,cex=2)
 ```
 
-![](create_github_readme_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](README_files/create_github_readme_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
 ### Plotting with ggplot
 
@@ -83,4 +84,4 @@ ggplot() +
   theme_classic()
 ```
 
-![](create_github_readme_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](README_files/create_github_readme_files/figure-markdown_github/unnamed-chunk-5-1.png)
