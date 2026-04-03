@@ -26,15 +26,15 @@ bird_menu("rec")
 ```
 
     ##                bird_names ncols recommended
-    ## 5          Cassin_s_Finch     2  Continuous
-    ## 42   Ultramarine_Lorikeet     5  Continuous
-    ## 43 Hildebrandt_s_Starling     5  Continuous
     ## 37  Lilac_breasted_Roller     5    Discrete
     ## 47     European_Goldfinch     6    Discrete
     ## 51          Scarlet_Macaw     7    Discrete
-    ## 15    Costa_s_Hummingbird     3   Divergent
-    ## 17         Lovely_Sunbird     3   Divergent
-    ## 44             Bluethroat     5   Divergent
+    ## 15    Costa_s_Hummingbird     3   Diverging
+    ## 17         Lovely_Sunbird     3   Diverging
+    ## 44             Bluethroat     5   Diverging
+    ## 5          Cassin_s_Finch     2  Sequential
+    ## 42   Ultramarine_Lorikeet     5  Sequential
+    ## 43 Hildebrandt_s_Starling     5  Sequential
 
 ``` r
 #For all available birds, use: bird_menu("all")
