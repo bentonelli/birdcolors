@@ -25,7 +25,9 @@ Authors@R: c(
   )
 Depends: R (>= 4.0)
 Description: Create attractive palettes based on the colors of the world's birds. Palettes are composed of 2 to 9 colors, with options to expand palettes via interpolation. Compatible with the package 'ggplot2' and base R graphics.
-License: MIT + file LICENSE
+License: MIT LICENSE
+URL: https://github.com/bentonelli/birdcolors
+BugReports: https://github.com/bentonelli/birdcolors/issues
 Encoding: UTF-8
 LazyData: true
 Imports: 
