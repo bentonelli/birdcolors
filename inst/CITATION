@@ -4,5 +4,6 @@ bibentry(
   author = c(person("Benjamin","Tonelli"),person("Casey","Youngflesh")),
   note = "R package version 1.0.1",
   year = "2026",
-  url = "https://github.com/bentonelli/birdcolors"
+  url = "https://github.com/bentonelli/birdcolors",
+  doi = 10.5281/zenodo.19498510
 )
