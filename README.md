@@ -1,6 +1,8 @@
 # Bird Color Palettes (made with 100% REAL birds!)
 
-birdcolors is a palette generator to spice up your scientific plots (and
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/birdcolors)](http://cran.r-project.org/package=birdcolors)
+
+`birdcolors` is a palette generator to spice up your scientific plots (and
 maybe your life) using the diversity of colors observed across the birds
 of the world.
 
@@ -25,15 +27,15 @@ bird_menu("rec")
 ```
 
     ##                bird_names ncols recommended
-    ## 5          Cassin_s_Finch     2  Continuous
-    ## 42   Ultramarine_Lorikeet     5  Continuous
-    ## 43 Hildebrandt_s_Starling     5  Continuous
     ## 37  Lilac_breasted_Roller     5    Discrete
     ## 47     European_Goldfinch     6    Discrete
     ## 51          Scarlet_Macaw     7    Discrete
-    ## 15    Costa_s_Hummingbird     3   Divergent
-    ## 17         Lovely_Sunbird     3   Divergent
-    ## 44             Bluethroat     5   Divergent
+    ## 15    Costa_s_Hummingbird     3   Diverging
+    ## 17         Lovely_Sunbird     3   Diverging
+    ## 44             Bluethroat     5   Diverging
+    ## 5          Cassin_s_Finch     2  Sequential
+    ## 42   Ultramarine_Lorikeet     5  Sequential
+    ## 43 Hildebrandt_s_Starling     5  Sequential
 
 ``` r
 #For all available birds, use: bird_menu("all")
@@ -45,7 +47,8 @@ bird_menu("rec")
 bird_palette_visualizer(all_or_rec = "rec",pdf_plot = FALSE)
 ```
 
-![](create_github_readme_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](README_files/create_github_readme_files/figure-markdown_github/unnamed-chunk-3-1.png)
+
 
 ### Plotting discrete colors with base R
 
@@ -63,7 +66,7 @@ zz <- (1:7)
 plot(xx,yy,col=outp[zz],pch=19,cex=2)
 ```
 
-![](create_github_readme_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](README_files/create_github_readme_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
 ### Plotting with ggplot
 
@@ -81,4 +84,4 @@ ggplot() +
   theme_classic()
 ```
 
-![](create_github_readme_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](README_files/create_github_readme_files/figure-markdown_github/unnamed-chunk-5-1.png)
