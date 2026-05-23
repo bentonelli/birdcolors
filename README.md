@@ -1,10 +1,10 @@
-# Bird Color Palettes (made with 100% REAL birds!) <img src="man/figures/logo.png" align="right" height="275" alt="" />
+# birdcolors <img src="man/figures/logo.png" align="right" height="275" alt="" />
 
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/birdcolors)](http://cran.r-project.org/package=birdcolors)
 
 `birdcolors` is a palette generator to spice up your scientific plots (and
 maybe your life) using the diversity of colors observed across the birds
-of the world.
+of the world. Now made with 100% real birds.
 
 Cite us: Tonelli, B.A., Youngflesh, C. (2026) birdcolors: Create Palettes from the Colors of the World's Birds. R package version 1.0.1
 
