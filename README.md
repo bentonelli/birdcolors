@@ -1,4 +1,4 @@
-# Bird Color Palettes (made with 100% REAL birds!)
+# Bird Color Palettes (made with 100% REAL birds!) <img src="man/figures/logo.png" align="right" height="139" alt="" />
 
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/birdcolors)](http://cran.r-project.org/package=birdcolors)
 
